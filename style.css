@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  background-image: url(./images/bg-mobile.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.container .first {
+  width: 90%;
+  border-radius: 10px 50px 10px 10px;
+  background-color: #1d2c67;
+  padding: 50px;
+}
+
+.container .first .actions {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.container .first .actions div {
+  border-radius: 5px;
+  background-color: #0c122c;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .second {
+  width: 90%;
+  border-radius: 10px;
+  background-color: #1d2c67;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.container .second .second-header {
+  font-size: 16px;
+  color: #848794;
+  font-weight: 400;
+}
+
+.container .second .second-header span {
+  color: #dddbff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container .second .slide-container {
+  width: 100%;
+  background-color: #0c122c;
+  border-radius: 20px;
+  height: 20px;
+  padding: 3px;
+}
+
+.container .second .slide-container .slide {
+  width: 70%;
+  height: 100%;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  padding: 2px;
+  padding-left: 2px;
+}
+
+.container .second .slide-container .slide .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  float: right;
+}
+
+.container .second .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.container .second .info .left {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 200%;
+  background-color: white;
+  border-radius: 10px;
+  color: #848794;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 200px;
+  height: 80px;
+  gap: 10px;
+}
+
+.container .second .info .left span {
+  font-size: 50px;
+  font-weight: 700;
+  color: #0c122c;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    background-image: url(./images/bg-desktop.png);
+    background-size: 100%;
+    background-position: bottom;
+    background-color: #0c122c;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-inline: 200px;
+  }
+  .container .first {
+    margin-bottom: 50px;
+    height: 250px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-inline: 70px;
+  }
+  .container .second {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .second .info .left {
+    top: -170px;
+    right: 0;
+    left: 80%;
+  }
+  .container .second .info .left::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 20px solid transparent;
+    border-right-color: white;
+    z-index: 2;
+    right: 0;
+    bottom: -20px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */

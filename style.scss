@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+//   ### Primary
+
+
+$from: hsl(6, 100%, 80%);
+$to: hsl(335, 100%, 65%);
+
+//   ### Neutral
+
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .first {
+        width: 90%;
+        border-radius: 10px 50px 10px 10px;
+        background-color: $DarkBlue;
+        padding: 50px;
+
+        .actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+
+            div {
+                border-radius: 5px;
+                background-color: $VeryDarkBlue;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    .second {
+        width: 90%;
+        border-radius: 10px;
+        background-color: $DarkBlue;
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        .second-header {
+            font-size: 16px;
+            color: $GrayishBlue;
+            font-weight: 400;
+
+            span {
+                color: $PaleBlue;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+        .slide-container{
+            width: 100%;
+            background-color: $VeryDarkBlue;
+            border-radius: 20px;
+            height: 20px;
+            padding: 3px;
+
+            .slide{
+                width: 70%;
+                height: 100%;
+                border-radius: 20px;
+                background: linear-gradient(to right,$from,$to);
+                padding: 2px;
+                padding-left: 2px;
+                .dot{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    background-color: white;
+                    float: right;
+                }
+            }
+        }
+        .info{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            position: relative;
+            .left{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 200%;
+                background-color: white;
+                border-radius: 10px;
+                color: $GrayishBlue;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
+                height: 80px;
+                gap: 10px;
+                span{
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: $VeryDarkBlue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:900px){
+    .container{
+        background-image: url(./images/bg-desktop.png);
+        background-size: 100%;
+        background-position: bottom;
+        background-color: $VeryDarkBlue;
+        flex-direction: row;
+        padding-inline: 200px;
+
+        .first{
+            margin-bottom: 50px;
+            height: 250px;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-inline: 70px;
+        }
+        .second{
+            align-items: flex-start;
+            .info{
+                .left{
+                    top: -170px;
+                    right: 0;
+                    left: 80%;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 1px;
+                        border: 20px solid transparent;
+                        border-right-color: white;
+                        z-index: 2;
+                        right: 0;
+                        bottom: -20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
